@@ -1,0 +1,38 @@
+{
+	"name": "n8n-nodes-naabu",
+	"version": "0.1.0",
+	"description": "n8n community node for port scanning with naabu",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"naabu",
+		"port-scanner",
+		"security"
+	],
+	"license": "MIT",
+	"main": "dist/nodes/Naabu/Naabu.node.js",
+	"scripts": {
+		"build": "tsc && gulp build:icons",
+		"dev": "tsc --watch",
+		"lint": "tsc --noEmit",
+		"prepublishOnly": "npm run build"
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"nodes": [
+			"dist/nodes/Naabu/Naabu.node.js"
+		]
+	},
+	"files": [
+		"dist"
+	],
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"gulp": "^4.0.2",
+		"n8n-workflow": "*",
+		"typescript": "~5.5.0"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
